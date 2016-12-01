@@ -30,7 +30,7 @@ func generateRandomBytes(n int) ([]byte, error) {
 // securely generated random string.
 func generateRandomString(s int) (string, error) {
 	b, err := generateRandomBytes(s)
-	return base64.URLEncoding.EncodeToString(b), err
+	return base64.StdEncoding.EncodeToString(b), err
 }
 
 // GenerateKey will return a base64 representation of a 32byte string
